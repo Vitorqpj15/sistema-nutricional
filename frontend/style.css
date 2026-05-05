@@ -1,0 +1,186 @@
+/* ================================
+   RESET E CONFIGURAÇÕES GERAIS
+   Zeramos estilos padrão do navegador
+   para ter controle total do visual
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* faz o padding não aumentar o tamanho do elemento */
+}
+
+/* Fonte e cor de fundo da página inteira */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f0;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ================================
+   CABEÇALHO
+================================ */
+header {
+  background-color: #2e7d32; /* verde escuro */
+  color: white;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 1rem;
+  opacity: 0.85; /* levemente transparente */
+}
+
+/* ================================
+   ÁREA PRINCIPAL — centraliza o conteúdo
+================================ */
+main {
+  max-width: 700px;    /* largura máxima */
+  margin: 32px auto;   /* centraliza horizontalmente */
+  padding: 0 16px;     /* espaçamento lateral em telas pequenas */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;           /* espaço entre os cards */
+}
+
+/* ================================
+   CARDS — cada seção é um card
+================================ */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  /* sombra suave para dar profundidade */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  color: #2e7d32;
+  margin-bottom: 6px;
+}
+
+.card .descricao {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+/* ================================
+   FORMULÁRIOS
+================================ */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* espaço entre os campos */
+}
+
+/* Estilo dos inputs e select */
+input, select {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s; /* animação suave ao focar */
+  width: 100%;
+}
+
+/* Muda a borda quando o usuário clica no campo */
+input:focus, select:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+/* ================================
+   BOTÕES
+================================ */
+button {
+  padding: 12px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s; /* animação suave no hover */
+}
+
+/* Escurece o botão quando o mouse passa por cima */
+button:hover {
+  background-color: #1b5e20;
+}
+
+/* ================================
+   MENSAGENS DE FEEDBACK
+================================ */
+.mensagem {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  min-height: 20px; /* reserva espaço para não pular o layout */
+}
+
+.mensagem.sucesso {
+  color: #2e7d32;
+}
+
+.mensagem.erro {
+  color: #c62828;
+}
+
+/* ================================
+   TABELA DE REGISTROS
+================================ */
+table {
+  width: 100%;
+  border-collapse: collapse; /* remove espaço entre bordas */
+  margin-top: 8px;
+}
+
+thead {
+  background-color: #f5f5f5;
+}
+
+th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f0f0f0; /* linha divisória suave */
+  font-size: 0.95rem;
+}
+
+/* Destaca a linha quando o mouse passa */
+tbody tr:hover {
+  background-color: #f9fbe7;
+}
+
+/* ================================
+   TOTAL DE CALORIAS
+================================ */
+.total {
+  display: flex;
+  justify-content: space-between; /* empurra os textos para as extremidades */
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid #e8f5e9;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#totalCalorias {
+  color: #2e7d32;
+  font-size: 1.3rem;
+}
