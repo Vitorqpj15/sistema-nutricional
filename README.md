@@ -1,20 +1,15 @@
-# Sistema Contábil - Gestão de Obrigações
-
 ##Sobre o projeto
-Sistema desenvolvido para auxiliar escritórios de contabilidade no controle de prazos e obrigações fiscais dos clientes.
+
+O NutriTrack é uma aplicação web desenvolvida para auxiliar no controle e análise da ingestão diária de alimentos, com foco em organização de dados e acompanhamento de metas calóricas.
+O sistema permite registrar alimentos consumidos, calcular automaticamente o total de calorias e fornecer insights sobre o comportamento alimentar ao longo do tempo.
 
 ##Funcionalidades
-- Cadastro de clientes
-- Cadastro de obrigações
-- Controle de prazos
-- Status das atividades
+Cadastro de alimentos consumidos
+Listagem diária de alimentos
+Cálculo automático de calorias totais
 
 ##Tecnologias
 - HTML
 - CSS
 - JavaScript
-
-##Futuras melhorias
-- Dashboard
-- Login de usuários
-- Integração com banco de dados
+- Postgreesql
