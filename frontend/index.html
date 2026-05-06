@@ -8,61 +8,64 @@
 </head>
 <body>
 
-
   <header>
-    <h1>🥗 NutriTrack</h1>
-    <p>Controle sua alimentação diária</p>
+    <h1>NutriTrack</h1>
+    <p id="bemVindo"></p>
   </header>
 
   <main>
 
+    <!-- BARRA DE PROGRESSO DE CALORIAS -->
     <section class="card">
-      <h2>📋 Cadastrar Alimento</h2>
+      <h2> Meta do dia</h2>
+      <p class="descricao" id="descricaoMeta">Carregando sua meta...</p>
+
+      <div class="progresso-container">
+        <div class="progresso-label">
+          <span id="caloriasConsumidas">0 kcal consumidas</span>
+          <span id="metaLabel">Meta: -- kcal</span>
+        </div>
+        <div class="progresso-barra">
+          <div class="progresso-fill" id="progressoFill" style="width: 0%"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CADASTRAR ALIMENTO -->
+    <section class="card">
+      <h2>Cadastrar Alimento</h2>
       <p class="descricao">Adicione um alimento ao sistema com suas calorias por 100g</p>
 
       <div class="form-group">
-        <input 
-          type="text" 
-          id="nomeAlimento" 
-          placeholder="Nome do alimento (ex: Arroz cozido)"
-        >
-        <input 
-          type="number" 
-          id="caloriasAlimento" 
-          placeholder="Calorias por 100g (ex: 130)"
-        >
+        <input type="text" id="nomeAlimento" placeholder="Nome do alimento (ex: Arroz cozido)">
+        <input type="number" id="caloriasAlimento" placeholder="Calorias por 100g (ex: 130)">
         <button onclick="cadastrarAlimento()">Cadastrar</button>
       </div>
 
       <p id="msgCadastro" class="mensagem"></p>
     </section>
 
+    <!-- REGISTRAR CONSUMO -->
     <section class="card">
-      <h2>🍽️ Registrar Consumo</h2>
+      <h2> Registrar Consumo</h2>
       <p class="descricao">Selecione o alimento e informe a quantidade consumida</p>
 
       <div class="form-group">
-    
         <select id="selectAlimento">
           <option value="">Carregando alimentos...</option>
         </select>
-        <input 
-          type="number" 
-          id="quantidade" 
-          placeholder="Quantidade em gramas (ex: 200)"
-        >
+        <input type="number" id="quantidade" placeholder="Quantidade em gramas (ex: 200)">
         <button onclick="registrarConsumo()">Registrar</button>
       </div>
 
       <p id="msgRegistro" class="mensagem"></p>
     </section>
 
-
+    <!-- CONSUMO DO DIA -->
     <section class="card">
-      <h2>📊 Consumo de Hoje</h2>
+      <h2>Consumo de Hoje</h2>
       <p class="descricao">Resumo do que você consumiu hoje</p>
 
-    
       <table id="tabelaRegistros">
         <thead>
           <tr>
@@ -71,9 +74,7 @@
             <th>Calorias</th>
           </tr>
         </thead>
-        <tbody id="corpoTabela">
-
-        </tbody>
+        <tbody id="corpoTabela"></tbody>
       </table>
 
       <div class="total">
@@ -82,9 +83,14 @@
       </div>
     </section>
 
+    <!-- BOTÃO SAIR -->
+    <button 
+      onclick="sair()" 
+      style="background-color: white; color: #111; border: 2px solid #111; margin-bottom: 32px"
+    >Sair da conta</button>
+
   </main>
 
   <script src="script.js"></script>
-
 </body>
 </html>
