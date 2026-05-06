@@ -1,4 +1,12 @@
+// Verifica se o usuário está logado
+// Se não tiver token, redireciona para o login
+const token = localStorage.getItem('token');
+if (!token) {
+  window.location.href = 'login.html';
+}
 
+// Pega os dados do usuário salvo
+const usuarioLogado = JSON.parse(localStorage.getItem('usuario'));
 const API_URL = 'http://localhost:3000';
 
 async function carregarAlimentos() {
