@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriTrack — Dados Físicos</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <header class="auth-header">
+    <h1>NutriTrack</h1>
+  </header>
+
+  <main class="auth-main">
+    <div class="card-light" style="max-width: 420px">
+
+      <h2>📊 Seus dados físicos</h2>
+      <p class="sub-light">Etapa 2 de 2 — Essas informações personalizam suas metas</p>
+
+      <div class="form-group">
+
+        <label class="input-label-light">Peso atual (kg)</label>
+        <input type="number" id="peso" placeholder="Ex: 75.5" step="0.1">
+
+        <label class="input-label-light">Altura (cm)</label>
+        <input type="number" id="altura" placeholder="Ex: 178">
+
+        <label class="input-label-light">Peso objetivo (kg)</label>
+        <input type="number" id="objetivoPeso" placeholder="Ex: 70.0" step="0.1">
+
+        <label class="input-label-light">Meta de calorias diárias (kcal)</label>
+        <input type="number" id="metaCalorias" placeholder="Ex: 2000">
+
+        <label class="input-label-light">Percentual de gordura (%)</label>
+        <input type="number" id="percentualGordura" placeholder="Ex: 15.5" step="0.1">
+
+        <label class="input-label-light">Nível de atividade física</label>
+        <select id="nivelAtividade">
+          <option value="">Selecione...</option>
+          <option value="sedentario">Sedentário</option>
+          <option value="leve">Leve (1-3x por semana)</option>
+          <option value="moderado">Moderado (3-5x por semana)</option>
+          <option value="intenso">Intenso (6-7x por semana)</option>
+          <option value="muito_intenso">Muito intenso (atleta)</option>
+        </select>
+
+        <div style="display: flex; gap: 10px; margin-top: 8px">
+          <button 
+            onclick="window.location.href='login.html'" 
+            style="background-color: #777; color: white; border: none; border-radius: 8px; padding: 14px; flex: 1; cursor: pointer; font-weight: 700"
+          >← Voltar</button>
+          <button class="btn-light" onclick="finalizarCadastro()" style="flex: 2">
+            Finalizar ✓
+          </button>
+        </div>
+
+      </div>
+
+      <p id="msgFisicos" class="mensagem"></p>
+    </div>
+  </main>
+
+  <script src="dados-fisicos.js"></script>
+</body>
+</html>
